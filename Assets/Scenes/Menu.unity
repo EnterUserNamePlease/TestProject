@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 57347207}
   - component: {fileID: 57347206}
   - component: {fileID: 57347205}
+  - component: {fileID: 57347208}
   m_Layer: 5
   m_Name: Earth
   m_TagString: Untagged
@@ -283,15 +284,15 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 926673622}
         m_MethodName: ClickedOn
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 57347203}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Earth
+          m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, Unity.ugui, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &57347206
@@ -331,6 +332,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57347203}
   m_CullTransparentMesh: 0
+--- !u!114 &57347208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57347203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b642f2ca965554f91b7927be28c122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &98775897
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +609,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb4dc926c2202c4ba6e985743545b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelData: {fileID: 11400000, guid: 5da9e93400a3bd94eb8df50458eef6bc, type: 2}
+  levelDataInitialization: {fileID: 11400000, guid: 5da9e93400a3bd94eb8df50458eef6bc,
+    type: 2}
   PlayerScoreUI: {fileID: 98775897}
 --- !u!4 &926673623
 Transform:
@@ -703,6 +717,7 @@ GameObject:
   - component: {fileID: 1158632446}
   - component: {fileID: 1158632445}
   - component: {fileID: 1158632444}
+  - component: {fileID: 1158632447}
   m_Layer: 5
   m_Name: Jupiter
   m_TagString: Untagged
@@ -775,13 +790,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 926673622}
         m_MethodName: ClickedOn
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1158632442}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Jupiter
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, Unity.ugui, Version=1.0.0.0,
@@ -823,6 +838,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158632442}
   m_CullTransparentMesh: 0
+--- !u!114 &1158632447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158632442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bba80c59509114799d2b65d81079a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257907840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1110,7 @@ GameObject:
   - component: {fileID: 1957629680}
   - component: {fileID: 1957629679}
   - component: {fileID: 1957629678}
+  - component: {fileID: 1957629681}
   m_Layer: 5
   m_Name: Moon
   m_TagString: Untagged
@@ -1155,13 +1183,13 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 926673622}
         m_MethodName: ClickedOn
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1957629676}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Moon
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, Unity.ugui, Version=1.0.0.0,
@@ -1203,3 +1231,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957629676}
   m_CullTransparentMesh: 0
+--- !u!114 &1957629681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957629676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c11c6095e1f3144aa4fc731f37e3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

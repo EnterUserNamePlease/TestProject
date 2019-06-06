@@ -16,18 +16,18 @@ public class BallMoving : MonoBehaviour
 	
 	void Start() {
 		
-		startPosition = ball.transform.position;
+		startPosition = ball.transform.position; // start position of the ball, uses when the ball has fallen
 		
-		Physics2D.gravity = new Vector2(0, -levelData.Gravity);
+		Physics2D.gravity = new Vector2(0, -levelData.Gravity); // set physics gravity 
 		
-		gameObject.GetComponent<SpriteRenderer>().color = levelData.BackgroundColor;
+		gameObject.GetComponent<SpriteRenderer>().color = levelData.BackgroundColor; // set background color
 		
 	}
 	
 	
     void Update() {
 		
-		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+		#if UNITY_EDITOR || UNITY_STANDALONE_WIN // using left mouse button click for pushing the ball
 		
 			if (Input.GetMouseButton(0)){
 			
@@ -37,7 +37,7 @@ public class BallMoving : MonoBehaviour
 			
 			}
 
-		#else
+		#else // using touch for pushing the ball
 		
 			if (Input.touchCount > 0){
 			

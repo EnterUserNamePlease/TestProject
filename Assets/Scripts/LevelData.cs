@@ -18,6 +18,7 @@ public class LevelData : ScriptableObject
         }
     }
 	
+	
 	public Color BackgroundColor
     {
         get
@@ -26,10 +27,12 @@ public class LevelData : ScriptableObject
         }
     }
 	
+	
 	public void GravitySet(float setGravity)
     {
        gravity = setGravity;
     }
+	
 	
 	public void ColorSet(Color setColor)
     {

@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {	
 	[SerializeField]
-    private LevelData levelData;
+	private LevelData levelDataInitialization;
+	
+    public static LevelData levelData;
 	
 	public static int PlayerScore;
 	
@@ -16,33 +18,24 @@ public class StartGame : MonoBehaviour
 	
 	void Start(){
 		
-		PlayerScoreUI.GetComponent<Text>().text = "BallHit : " + PlayerScore.ToString();
+		levelData = levelDataInitialization;
+				
+		PlayerScoreUI.GetComponent<Text>().text = "BallHit : " + PlayerScore.ToString(); // show text with player score in main menu
 		
 	}
 	
 
-	public void ClickedOn(string planet){
+	public void ClickedOn(GameObject button){
+				
+		ISetLevelParams levelParams = button.GetComponent<ISetLevelParams>(); // use C# interface for clickable objects; (task)
 		
-		if (planet=="Earth"){
+		if(levelParams!=null){
 			
-			levelData.GravitySet (9.8F);
-			levelData.ColorSet (Color.blue);
-			
-		}
-		else if(planet=="Moon"){
-			
-			levelData.GravitySet (1.6F);
-			levelData.ColorSet (Color.gray);
-			
-		}
-		else if(planet=="Jupiter"){
-			
-			levelData.GravitySet (24.5F);
-			levelData.ColorSet (Color.yellow);
+			levelParams.SetLevelSettings();
 			
 		}
 				
-		SceneManager.LoadScene("GameplayScene");
+		SceneManager.LoadScene("GameplayScene"); // load gameplay scene
 				
 	}
 
